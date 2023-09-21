@@ -10,19 +10,15 @@ str(guess)
 
 # makes sure the lengths of the word guessed and the secret word are the same
 while len(guess) != len(secret):
-        guess = str(input(f"That was not {len(secret)} letters! Try again: "))
+    guess = input(f"That was not {len(secret)} letters! Try again: ")
  
 guess_idx: int = 0
 blocks: str = ""
-white_box: str = "\U00002B1C"
-green_box: str = "\U0001F7E9"
-yellow_box: str = "\U0001F7E8"
-
 # goes through each letter of the guessed word
 while guess_idx < len(secret):
     # checks to see if the guessed word is the same as the secret word
     if guess[guess_idx] == secret[guess_idx]:
-        blocks += green_box
+        blocks += "\U0001F7E9"
     else:
         character_present: bool = False
         alt_idx: int = 0
@@ -33,10 +29,10 @@ while guess_idx < len(secret):
             else:
                 alt_idx += 1
         # adds a yellow block (correct, but wrong place) or white (incorrect) block to block string 
-        if guess_idx is True:
-            blocks += yellow_box
+        if character_present is True:
+            blocks += "\U0001F7E8"
         else:
-            blocks += white_box
+            blocks += "\U00002B1C"
     guess_idx += 1
 print(blocks)
 
