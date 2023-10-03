@@ -49,17 +49,16 @@ def main() -> None:
     """The entrypoint of the program and main game loop."""
     secret: str = "codes"
     guess: str = ""
-    turn: int = 1
+    turn: int = 0
     # while there are more turns left and the word has not been guessed correctlty...
     while turn <= 5 and guess != secret:
         turn += 1
         print(f"=== Turn {turn}/6 ===")
         guess = input_guess(len(secret))
         print(emojified(guess, secret))
-    if guess == secret:
+    if secret == guess:
         print(f"You win in {turn}/6 turns!")
-        exit()
-    else:   # user did not guess the word in 6 tries
+    else:   # user did not guess the word in 6 turns
         print("X/6 - Sorry, try again Tomorrow!")
 
 
