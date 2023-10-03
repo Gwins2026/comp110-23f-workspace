@@ -54,10 +54,11 @@ def main() -> None:
     while turn <= 5 and guess != secret:
         turn += 1
         print(f"=== Turn {turn}/6 ===")
-        guess = input_guess(len(secret))
+        guess = str = input_guess(len(secret))
         print(emojified(guess, secret))
-    if secret == guess:
+    if guess == secret:
         print(f"You win in {turn}/6 turns!")
+        exit()
     else:   # user did not guess the word in 6 tries
         print("X/6 - Sorry, try again Tomorrow!")
 
