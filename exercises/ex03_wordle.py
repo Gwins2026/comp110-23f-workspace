@@ -51,7 +51,7 @@ def main() -> None:
     guess: str = ""
     turn: int = 1
     # while there are more turns left and the word has not been guessed correctlty...
-    while turn <= 6 and guess != secret:
+    while turn <= 5 and guess != secret:
         turn += 1
         print(f"=== Turn {turn}/6 ===")
         guess = input_guess(len(secret))
