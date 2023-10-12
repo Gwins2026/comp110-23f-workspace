@@ -40,3 +40,4 @@ def is_equal(x: list[int], y: list[int]) -> bool:
         else:
             return(False)
     return(True)
+    
