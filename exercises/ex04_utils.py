@@ -25,7 +25,7 @@ def max(inputs: list[int]) -> int:
         if inputs[i] >= max_input:
             max_input = inputs[i]
         i += 1
-    return max_input
+    return(max_input)
 
 def is_equal(x: list[int], y: list[int]) -> bool:
     """Determines if two lists are identical or not."""
