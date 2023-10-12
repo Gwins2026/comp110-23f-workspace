@@ -15,6 +15,7 @@ def all(xs: list[int], guess: int) -> bool:
             return(False)
     return(True)
 
+
 def max(inputs: list[int]) -> int:
     """Returning the largest integer in a list."""
     if len(inputs) == 0:
@@ -26,6 +27,7 @@ def max(inputs: list[int]) -> int:
             max_input = inputs[i]
         i += 1
     return(max_input)
+
 
 def is_equal(x: list[int], y: list[int]) -> bool:
     """Determines if two lists are identical or not."""
