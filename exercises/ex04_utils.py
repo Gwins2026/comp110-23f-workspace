@@ -5,7 +5,7 @@ __author__ = "730561330"
 
 def all(xs: list[int], guess: int) -> bool:
     """Determines whether a given list has all the same integers."""
-    if len(xs) == 0
+    if len(xs) == 0:
         return(False)
     i: int = 0
     while i <= len(xs) - 1:
@@ -40,4 +40,3 @@ def is_equal(x: list[int], y: list[int]) -> bool:
         else:
             return(False)
     return(True)
-    
