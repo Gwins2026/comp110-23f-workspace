@@ -22,7 +22,7 @@ def max(inputs: list[int]) -> int:
         raise ValueError("max() arg is an empty List")
     i: int = 0
     max_input: int = inputs[0]
-    while i < len(inputs) - 1:
+    while i < len(inputs):
         if inputs[i] >= max_input:
             max_input = inputs[i]
         i += 1
