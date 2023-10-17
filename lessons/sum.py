@@ -27,6 +27,8 @@ def f_range_sum(vals: list[float]) -> float:
         sums += vals[idx]
     return sums 
 
+
+# class notes
     pets: list[str] = ["Louie", "Bo", "Bear"]
 for idx in pets:
    print(f"Good boy, {idx}!")
