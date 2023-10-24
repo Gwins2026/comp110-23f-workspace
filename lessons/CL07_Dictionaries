@@ -55,6 +55,4 @@ else:
 
 # Using "for" Loops
 for key in ice_cream:
-    print(key)
-for key in ice_cream:
-    print(ice_crema[key])
+    print(f"{key} has {ice_cream[key]} orders.")
