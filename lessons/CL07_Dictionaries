@@ -1,0 +1,60 @@
+"""Practice with Dictionaries in a lesson."""
+
+# dictionaries don't have to use int like lists do
+# also called: Map, Hashmap, Key-Value Store
+
+
+# Constructing a dictionary practice/example
+ice_cream: dict[str, float] = {"chocolate": 12, "vanilla": 8, "strawberry": 5}
+print("Made my dictionary.")
+print(ice_cream)
+
+
+#Adding a key, value pair to a dictionary
+ice_cream["mint"] = 3
+print("After adding mint: ")
+print(ice_cream)
+
+
+# Removing a key, value pair from a dictionary
+ice_cream.pop("mint")
+print("After removing mint: ")
+print(ice_cream)
+
+
+# Accessing a value
+print(f"There are {ice_cream['chocolate']} orders of chocolate")
+
+
+# Adjusting a value
+ice_cream["vanilla"] = 10
+    # Or you can do ice_cream["vanilla"] += 2
+print("After modifying vanilla: ")
+print(ice_cream)
+
+
+# Getting the length
+print(f"The number of key value pairs: {len(ice_cream)}")
+    #print(f"The number of flavors offered: {len(ice_cream)}") ... aka using context
+
+
+# Checking if value is in dictionary
+print("Is mint in ice_cream?")
+print("mint" in ice_cream)
+print("Is chocolate in ice_cream?")
+print("chocolate" in ice_cream)
+# Using it in a conditional
+if "mint" in ice_cream:
+    print(f"There are {ice_cream['mint']} orders of mint.")
+else:
+    print("No orders of mint.")
+
+
+# In a dictionary you can't have multiple of the same key (Ex: can't have 2 choclates)
+
+
+# Using "for" Loops
+for key in ice_cream:
+    print(key)
+for key in ice_cream:
+    print(ice_crema[key])
