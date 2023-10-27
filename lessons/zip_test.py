@@ -2,7 +2,7 @@
 
 __author__ = "730561330"
 
-from lessons.zip.py import zip
+from lessons.zip import zip
 
 
 def test_multiple_char():
