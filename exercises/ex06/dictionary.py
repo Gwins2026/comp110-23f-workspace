@@ -16,7 +16,7 @@ def invert(dicts: dict[str, str]) -> dict[str, str]:
 def favorite_color(colors: dict[str, str]) -> str:
     """In a given dictionary of people and their favorite color, function determines which color is most popular."""
     color_counts: dict[str, str] = {}
-    first_appearance: dict[str, str]: {}
+    first_appearance: dict[str, str] = {}
     fav_color: str = None
     i: int = 0
     for name, color in colors[name]:
