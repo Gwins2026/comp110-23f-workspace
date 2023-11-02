@@ -15,7 +15,7 @@ def invert(dicts: dict[str, str]) -> dict[str, str]:
 
 def favorite_color(colors: dict[str, str]) -> str:
     """In a given dictionary of people and their favorite color, function determines which color is most popular."""
-    color_counts: dict[str, str] = {}
+    color_counts: dict[str, int] = {}
     first_appearance: dict[str, str] = {}
     fav_color: str = ""
     i: int = 0
@@ -53,7 +53,7 @@ def alphabetizer(cate_list: list[str]) -> dict[str, list[str]]:
         if first_letter in result:
             result[first_letter].append(key)
         else:
-            result[first_letter] = [key]
+            result[first_letter].append(key)
     return result 
 
 
@@ -63,5 +63,5 @@ def update_attendance(attend_log: dict[str, list[str]], day: str, student: str) 
         if key == day:
             attend_log[key].append(student)
         else: 
-            attend_log[day] = [student]
+            attend_log[day].append(student)
     return attend_log 
