@@ -15,9 +15,9 @@ def invert(dicts: dict[str, str]) -> dict[str, str]:
 
 def favorite_color(colors: dict[str, str]) -> str:
     """In a given dictionary of people and their favorite color, function determines which color is most popular."""
-    color_counts: dict[str, str] = {}
+    color_counts: dict[str, int] = {}
     first_appearance: dict[str, str] = {}
-    fav_color: str = None
+    fav_color: str = ""
     i: int = 0
     for name, color in colors.items():
         if color in color_counts:
@@ -26,7 +26,7 @@ def favorite_color(colors: dict[str, str]) -> str:
             color_counts[color] = 1
             first_appearance[color] = name
         if color_counts[color] > i:
-            i = color_counts[color]
+            color_counts[color] = i
             fav_color = color
         elif color_counts[color] == i:
             if name == first_appearance[color]:
@@ -48,13 +48,12 @@ def count(freq_list: list[str]) -> dict[str, int]:
 def alphabetizer(cate_list: list[str]) -> dict[str, list[str]]:
     """Given a list of strings, function cataegorizes list into an order according to first letter in the string."""
     result: dict[str, list[str]] = {}
-    cate_list.lower()
     for key in cate_list:
         first_letter = key[0].lower()
         if first_letter in results:
-            result[first_letter] = key
+            result[first_letter] += [key]
         else:
-            result[first_letter] = key
+            result[first_letter] = [key]
     return result 
 
 
