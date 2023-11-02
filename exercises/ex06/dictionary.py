@@ -43,7 +43,7 @@ def count(freq_list: list[str]) -> dict[str, int]:
             result[i] += 1
             i += 1
         else:
-            result{} += {freq_list[i]: 1}
+            result() += {freq_list[i]: 1}
             i += 1
     return result 
 
