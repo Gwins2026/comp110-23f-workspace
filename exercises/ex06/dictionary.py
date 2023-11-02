@@ -5,11 +5,11 @@ __author__ = "730561330"
 
 def invert(dicts: dict[str, str]) -> dict[str, str]:
     """A given dictionary is inverted and the key list becomes the values of the output list and vice versa."""
-    if dicts[key] in dicts > 1:
-        raise KeyError("A given list value repeats itself.")
     inverted: dict[str, str] = {}
-    for key in dicts:
-        inverted() += {dicts[key]: key}
+    for key, value in inverted.items():
+        if value in inverted:
+            raise KeyError("A given list value repeats itself.")
+        inverted[value] = key
     return inverted 
 
 
