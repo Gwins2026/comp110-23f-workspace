@@ -24,12 +24,12 @@ def favorite_color(colors: dict[str, str]) -> str:
             color_counts[color] += 1
         else:
             color_counts[color] = 1
-            first_appearance[color] = name
+            first_appearance[color] = color
         if color_counts[color] > i:
             color_counts[color] = i
             fav_color = color
         elif color_counts[color] == i:
-            if name == first_appearance[color]:
+            if color == first_appearance[color]:
                 fav_color = color
     return fav_color 
 
