@@ -6,7 +6,7 @@ __author__ = "730561330"
 def invert(dicts: dict[str, str]) -> dict[str, str]:
     """A given dictionary is inverted and the key list becomes the values of the output list and vice versa."""
     inverted: dict[str, str] = {}
-    for key, value in inverted.items():
+    for key, value in dicts.items():
         if value in inverted:
             raise KeyError("A given list value repeats itself.")
         inverted[value] = key
@@ -19,7 +19,7 @@ def favorite_color(colors: dict[str, str]) -> str:
     first_appearance: dict[str, str] = {}
     fav_color: str = None
     i: int = 0
-    for name, color in colors[name]:
+    for name, color in colors.items():
         if color in color_counts:
             color_counts[color] += 1
         else:
