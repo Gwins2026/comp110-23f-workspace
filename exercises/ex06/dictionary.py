@@ -59,7 +59,7 @@ def alphabetizer(cate_list: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(attend_log: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
     """Given a dictionary of students and their class attendance, function updates and changes that dictionary to reflect new attendance by students."""
-    if key == day:
+    if day in attend_log:
         attend_log[key].append(student)
     else: 
         attend_log[day] = [student]
