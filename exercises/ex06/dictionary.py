@@ -50,7 +50,7 @@ def alphabetizer(cate_list: list[str]) -> dict[str, list[str]]:
     result: dict[str, list[str]] = {}
     for key in cate_list:
         first_letter = key[0].lower()
-        if first_letter in results:
+        if first_letter in result:
             result[first_letter] += [key]
         else:
             result[first_letter] = [key]
