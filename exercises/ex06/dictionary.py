@@ -28,7 +28,7 @@ def favorite_color(colors: dict[str, str]) -> str:
         if color_counts[color] > i:
             color_counts[color] = i
             fav_color = color
-        elif color_counts[color] == i:
+        if color_counts[color] == i:
             if color == first_appearance[color]:
                 fav_color = color
     return fav_color 
@@ -53,7 +53,7 @@ def alphabetizer(cate_list: list[str]) -> dict[str, list[str]]:
         if first_letter in result:
             result[first_letter].append(key)
         else:
-            result[first_letter].append(key)
+            result[first_letter] = [key]
     return result 
 
 
@@ -63,5 +63,5 @@ def update_attendance(attend_log: dict[str, list[str]], day: str, student: str) 
         if key == day:
             attend_log[key].append(student)
         else: 
-            attend_log[day].append(student)
+            attend_log[day] = [student]
     return attend_log 
