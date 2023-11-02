@@ -64,5 +64,5 @@ def update_attendance(attend_log: dict[str, list[str]], day: str, student: str) 
         if key == day:
             attend_log[key] += student
         else: 
-            attend_log() += {day: student}
+            attend_log[day] = student
     return attend_log 
