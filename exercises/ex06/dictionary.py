@@ -17,7 +17,7 @@ def favorite_color(colors: dict[str, str]) -> str:
     """In a given dictionary of people and their favorite color, function determines which color is most popular."""
     color_counts: dict[str, int] = {}
     first_appearance: dict[str, str] = {}
-    fav_color: str = str
+    fav_color: str = ""
     i: int = 0
     for name, color in colors.items():
         if color in color_counts:
@@ -60,7 +60,7 @@ def alphabetizer(cate_list: list[str]) -> dict[str, list[str]]:
 def update_attendance(attend_log: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
     """Given a dictionary of students and their class attendance, function updates and changes that dictionary to reflect new attendance by students."""
     if day in attend_log:
-        attend_log[key].append(student)
+        attend_log[day].append(student)
     else: 
         attend_log[day] = [student]
     return attend_log 
