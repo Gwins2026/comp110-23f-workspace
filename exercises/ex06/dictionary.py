@@ -37,14 +37,11 @@ def favorite_color(colors: dict[str, str]) -> str:
 def count(freq_list: list[str]) -> dict[str, int]:
     """Given a list of strings, function produces a dictionary according to frequency of each value in input list."""
     result: dict[str, int] = {}
-    i: int = 0
-    while i < len(freq_list):
-        if freq_list[i] in result:
-            result[i] += 1
-            i += 1
+    for key in freq_list:
+        if key in result:
+            result[key] += 1
         else:
-            result() += {freq_list[i]: 1}
-            i += 1
+            result[key] = 1
     return result 
 
 
