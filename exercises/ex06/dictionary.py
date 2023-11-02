@@ -17,7 +17,7 @@ def favorite_color(colors: dict[str, str]) -> str:
     """In a given dictionary of people and their favorite color, function determines which color is most popular."""
     color_counts: dict[str, int] = {}
     first_appearance: dict[str, str] = {}
-    fav_color: str = None
+    fav_color: str = str
     i: int = 0
     for name, color in colors.items():
         if color in color_counts:
