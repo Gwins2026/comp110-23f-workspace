@@ -49,13 +49,12 @@ def alphabetizer(cate_list: list[str]) -> dict[str, list[str]]:
     """Given a list of strings, function cataegorizes list into an order according to first letter in the string."""
     result: dict[str, list[str]] = {}
     cate_list.lower()
-    i: int = 0
-    while i < len(cate_list):
-        if cate_list[i[0]] in result:
-            result[cate_list[i[0]]] += cate_list[i]
+    for key in cate_list:
+        first_letter = key[0].lower()
+        if first_letter in results:
+            result[first_letter] = key
         else:
-            result() += {cate_list[i[0]]: cate_list[i]}
-        i += 1
+            result[first_letter] = key
     return result 
 
 
