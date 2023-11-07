@@ -11,7 +11,7 @@ class Point:
     def __init__(self, x_init: float, y_init: float):
         """Point's constructor."""
         self.x = x_init
-        self.y - y_init
+        self.y = y_init
 
     def scale_by(self, factor: int):
         """Mutates point by scaling x and y attributes by 'factor'."""
