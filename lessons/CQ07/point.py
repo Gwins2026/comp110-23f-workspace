@@ -1,4 +1,4 @@
-""" """
+"""CQ07 - Intro to Object Oriented Programming."""
 from __future__ import annotations
 __author__ = "730561330"
 
@@ -18,7 +18,7 @@ class Point:
         self.x *= factor
         self.y *= factor
 
-    def scale(sefl, factor: int) -> Point:
+    def scale(self, factor: int) -> Point:
         """Returns a new point with factor-scaled attributes."""
         new_point: Point = Point(self.x * factor, self.y * factor)
         return new_point
