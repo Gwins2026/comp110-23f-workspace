@@ -1,8 +1,6 @@
 """ """
-
-__author__ = "730561330"
-
 from __future__ import annotations
+__author__ = "730561330"
 
 
 class Point:
