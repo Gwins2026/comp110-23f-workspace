@@ -2,13 +2,8 @@
 
 __author__ = "730561330"
 
+
 from exercises.ex06.dictionary import invert
-from exercises.ex06.dictionary import favorite_color
-from exercises.ex06.dictionary import count
-from exercises.ex06.dictionary import alphabetizer
-from exercises.ex06.dictionary import update_attendance
-
-
 # INVERT
 def test_empty_invert() -> None:
     """Invert of empty dict should result in {}."""
@@ -29,6 +24,7 @@ def test_invert_multiple_char() -> None:
     assert invert(input_dict) == output_dict
 
 
+from exercises.ex06.dictionary import favorite_color
 # FAVORITE_COLOR
 def test_empty_fav_color() -> None: 
     """Favorite_color of empty dict should result in {}."""
@@ -47,6 +43,7 @@ def test_multiple_fav_colors() -> None:
     assert favorite_color(test_dict) == "purple"
 
 
+from exercises.ex06.dictionary import count
 # COUNT
 def test_empty_count() -> None:
     """Count of empty lists should result in {}."""
@@ -67,6 +64,7 @@ def test_count_regular() -> None:
     assert count(test_list) == output_dict
 
 
+from exercises.ex06.dictionary import alphabetizer
 # ALPHABETIZER
 def test_empty_alphabetizer() -> None:
     """Alphabetizer of empty list should result in {}."""
@@ -87,6 +85,7 @@ def test_alphabetizer_multiple_words() -> None:
     assert alphabetizer(test_list) == output_dict
 
 
+from exercises.ex06.dictionary import update_attendance
 # UPDATE_ATTENDANCE
 def test_already_update_attendance() -> None:
     """Testing on a list that already accounts for the given student on that day."""
