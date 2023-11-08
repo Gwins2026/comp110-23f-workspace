@@ -1,4 +1,4 @@
-""" EX07 - 'dict' Unit Tests."""
+"""EX07 - 'dict' Unit Tests."""
 
 __author__ = "730561330"
 
