@@ -27,10 +27,10 @@ def favorite_color(colors: dict[str, str]) -> str:
     for key in color_counts:
         # Checks color's count values against the curren max, and assigns the color to the overall favorite if greater
         if color_counts[key] > maxs:
-            maxs = color_count[key]
+            maxs = color_counts[key]
             # Assigns the color to the overall favorite if greater
-            colors = key
-    return colors
+            fav = key
+    return fav
 
 
 def count(freq_list: list[str]) -> dict[str, int]:
@@ -58,12 +58,12 @@ def alphabetizer(cate_list: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(attend_log: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
     """Given a dictionary of students and their class attendance, function updates and changes that dictionary to reflect new attendance by students."""
-    new_log: dict[str, list[str]] = current_log
+    new_log: dict[str, list[str]] = attend_log
     if day in new_log:
         if student in new_log[day]:
-            return current_log
-        else: # Adds student to day's attendance
+            return attend_log
+        else:   # Adds student to day's attendance
             new_log[day].append[student]
-    else: # Selected day's attendance is not yet present
+    else:   # Selected day's attendance is not yet present
         new_log[day] = [student]
-    return attend_log 
+    return new_log 
