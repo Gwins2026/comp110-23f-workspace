@@ -15,14 +15,14 @@ def test_empty_invert():
     assert invert({}) == {}
 
 
-def test_invert_regular():
+def test_invert_reg():
     """Testing a dict of regular inputs to make sure the function invert runs properly."""
     input_dict: dict[str, str] = {"a": "b", "c": "d", "e": "f"}
     output_dict: dict[str, str] = {"b": "a", "d": "c", "f": "e"}
     assert invert(input_dict) == output_dict
 
 
-def test_invert_multiple_char():
+def test_invert_mult_char():
     """Testing entries with multiple characters in a dict."""
     input_dict: dict[str, str] = {"pow": "bang", "can": "soup", "blah": "bored"}
     output_dict: dict[str, str] = {"bang": "pow", "soup": "can", "bored": "blah"}
@@ -35,7 +35,7 @@ def test_empty_fav_color():
     assert favorite_color({}) == {}
 
 
-def test_fav_color_regular():
+def test_fav_color_reg():
     """Testing a dict of regular inputs to make sure the function favorite_color runs properly."""
     test_dict: dict[str, str] = {"Bob": "green", "Jerry": "green", "Charles": "blue"}
     assert favorite_color(test_dict) == "green"
