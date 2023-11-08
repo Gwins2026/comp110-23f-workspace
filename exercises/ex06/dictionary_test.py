@@ -2,11 +2,11 @@
 
 __author__ = "730561330"
 
-from exercizes.ex06.dictionary import invert
-from exercizes.ex06.dictionary import favorite_color
-from exercizes.ex06.dictionary import count
-from exercizes.ex06.dictionary import alphabetizer
-from exercizes.ex06.dictionary import update_attendance
+from ex06.dictionary import invert
+from ex06.dictionary import favorite_color
+from ex06.dictionary import count
+from ex06.dictionary import alphabetizer
+from ex06.dictionary import update_attendance
 
 
 # INVERT
