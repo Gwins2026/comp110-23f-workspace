@@ -15,23 +15,22 @@ def invert(dicts: dict[str, str]) -> dict[str, str]:
 
 def favorite_color(colors: dict[str, str]) -> str:
     """In a given dictionary of people and their favorite color, function determines which color is most popular."""
+    # Creates new dictionary
     color_counts: dict[str, int] = {}
-    first_appearance: dict[str, str] = {}
-    fav_color: str = ""
-    i: int = 0
-    for name, color in colors.items():
-        if color in color_counts:
-            color_counts[color] += 1
-        else:
-            color_counts[color] = 1
-            first_appearance[color] = color
-        if color_counts[color] > i:
-            i = color_counts[color]
-            fav_color = color
-        elif color_counts[color] == i:
-            if color == first_appearance[color]:
-                fav_color = color
-    return fav_color 
+    for key in colors:
+        if colors[key] in color_counts:
+            color_counts[colors[key]] += 1
+        else:   # New color encontered
+            color_counts[colors[key]] = 1
+    maxs: int = 0
+    fav: str = ""
+    for key in color_counts:
+        # Checks color's count values against the curren max, and assigns the color to the overall favorite if greater
+        if color_counts[key] > maxs:
+            maxs = color_count[key]
+            # Assigns the color to the overall favorite if greater
+            colors = key
+    return colors
 
 
 def count(freq_list: list[str]) -> dict[str, int]:
@@ -59,8 +58,12 @@ def alphabetizer(cate_list: list[str]) -> dict[str, list[str]]:
 
 def update_attendance(attend_log: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
     """Given a dictionary of students and their class attendance, function updates and changes that dictionary to reflect new attendance by students."""
-    if day in attend_log:
-        attend_log[day].append(student)
-    else: 
-        attend_log[day] = [student]
+    new_log: dict[str, list[str]] = current_log
+    if day in new_log:
+        if student in new_log[day]:
+            return current_log
+        else: # Adds student to day's attendance
+            new_log[day].append[student]
+    else: # Selected day's attendance is not yet present
+        new_log[day] = [student]
     return attend_log 
