@@ -53,14 +53,14 @@ def test_empty_count():
     assert count([]) == {}
 
 
-def test_count_frequency():
+def test_count_freq():
     """Testing a given list with strings that appear only once for the resulting dict frequency."""
     test_list: list[str] = ["random", "basketball", "find"]
     output_dict: dict[str, int] = {"random": 1, "basketball": 1, "find": 1}
     assert count(test_list) == output_dict
 
 
-def test_count_regular():
+def test_count_reg():
     """Testing a list of regular inputs to make sure the function count runs properly."""
     test_list: list[str] = ["a", "b", "c", "a", "b", "a"]
     output_dict: dict[str, int] = {"a": 3, "b": 2, "c": 1}
@@ -73,14 +73,14 @@ def test_empty_alphabetizer():
     assert alphabetizer([]) == {}
 
 
-def test_alphabetizer_regular():
+def test_alphabetizer_reg():
     """Testing a list of regular inputs to make sure the function alphabetizer runs properly."""
     test_list: list[str] = ["apple", "pear", "grape", "blueberry"]
     output_dict: dict[str, list[str]] = {"a": ["apple"], "p": ["pear"], "g": ["grape"], "b": ["blueberry"]}
     assert alphabetizer(test_list) == output_dict
 
 
-def test_alphabetizer_multiple_words():
+def test_alphabetizer_mult_words():
     """Tests a list of mutiple words with the same first letter."""
     test_list: list[str] = ["apple", "animal", "amazing", "bat", "boardgame", "barbie", "fire", "fart"]
     output_dict: dict[str, list[str]] = {"a": ["apple", "animal", "amazing"], "b": ["bat", "boardgame", "barbe"], "f": ["fire", "fart"]}
@@ -96,7 +96,7 @@ def test_already_update_attendance():
     assert update_attendance(input_dict, test_day, test_student) == input_dict
 
 
-def test_update_attendance_regular():
+def test_update_attendance_reg():
     """Testing a dict of regular inputs to make sure the function update_attendance runs properly."""
     input_dict: dict[str, list[str]] = {"monday": ["Sarah", "Johnny"], "tuesday": ["Johnny"], "wednesday": ["Jenny", "Sarah"]}
     test_day: str = "wednesday"
