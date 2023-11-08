@@ -9,7 +9,7 @@ from exercises.ex06.dictionary import alphabetizer
 from exercises.ex06.dictionary import update_attendance
 
 
-# INVERT
+#  INVERT
 def test_empty_invert():
     """Invert of empty dict should result in {}."""
     assert invert({}) == {}
@@ -29,7 +29,7 @@ def test_invert_multiple_char():
     assert invert(input_dict) == output_dict
 
 
-# FAVORITE_COLOR
+#  FAVORITE_COLOR
 def test_empty_fav_color(): 
     """Favorite_color of empty dict should result in {}."""
     assert favorite_color({}) == {}
@@ -47,7 +47,7 @@ def test_multiple_fav_colors():
     assert favorite_color(test_dict) == "purple"
 
 
-# COUNT
+#  COUNT
 def test_empty_count():
     """Count of empty lists should result in {}."""
     assert count([]) == {}
@@ -67,7 +67,7 @@ def test_count_regular():
     assert count(test_list) == output_dict
 
 
-# ALPHABETIZER
+#  ALPHABETIZER
 def test_empty_alphabetizer():
     """Alphabetizer of empty list should result in {}."""
     assert alphabetizer([]) == {}
@@ -87,7 +87,7 @@ def test_alphabetizer_multiple_words():
     assert alphabetizer(test_list) == output_dict
 
 
-# UPDATE_ATTENDANCE
+#  UPDATE_ATTENDANCE
 def test_already_update_attendance():
     """Testing on a list that already accounts for the given student on that day."""
     input_dict: dict[str, list[str]] = {"monday": ["Sarah", "Johnny"], "tuesday": ["Johnny"], "wednesday": ["Jenny", "Sarah"]}
