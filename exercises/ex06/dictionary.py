@@ -32,6 +32,7 @@ def favorite_color(colors: dict[str, str]) -> str:
             fav = key
     return fav
 
+print(favorite_color({}))
 
 def count(freq_list: list[str]) -> dict[str, int]:
     """Given a list of strings, function produces a dictionary according to frequency of each value in input list."""
@@ -63,7 +64,7 @@ def update_attendance(attend_log: dict[str, list[str]], day: str, student: str) 
         if student in new_log[day]:
             return attend_log
         else:   # Adds student to day's attendance
-            new_log[day].append[student]
+            new_log[day].append(student)
     else:   # Selected day's attendance is not yet present
         new_log[day] = [student]
     return new_log 

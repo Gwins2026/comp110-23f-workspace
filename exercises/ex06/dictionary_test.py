@@ -32,7 +32,7 @@ def test_invert_mult_char():
 #  FAVORITE_COLOR
 def test_empty_fav_color(): 
     """Favorite_color of empty dict should result in {}."""
-    assert favorite_color({}) == {}
+    assert favorite_color({}) == ''
 
 
 def test_fav_color_reg():
@@ -83,32 +83,32 @@ def test_alphabetizer_reg():
 def test_alphabetizer_mult_words():
     """Tests a list of mutiple words with the same first letter."""
     test_list: list[str] = ["apple", "animal", "amazing", "bat", "boardgame", "barbie", "fire", "fart"]
-    output_dict: dict[str, list[str]] = {"a": ["apple", "animal", "amazing"], "b": ["bat", "boardgame", "barbe"], "f": ["fire", "fart"]}
+    output_dict: dict[str, list[str]] = {"a": ["apple", "animal", "amazing"], "b": ["bat", "boardgame", "barbie"], "f": ["fire", "fart"]}
     assert alphabetizer(test_list) == output_dict
 
 
 #  UPDATE_ATTENDANCE
-def test_already_update_attendance():
-    """Testing on a list that already accounts for the given student on that day."""
+def test_already_update_attendance_reg():
+    """Testing a dict of regular inputs to make sure the function update_attendance runs properly."""
     input_dict: dict[str, list[str]] = {"monday": ["Sarah", "Johnny"], "tuesday": ["Johnny"], "wednesday": ["Jenny", "Sarah"]}
     test_day: str = "tuesday"
     test_student: str = "Brad"
-    assert update_attendance(input_dict, test_day, test_student) == input_dict
+    output_dict: dict[str, list[str]] = {"monday": ["Sarah", "Johnny"], "tuesday": ["Johnny", "Brad"], "wednesday": ["Jenny", "Sarah"]}
+    assert update_attendance(input_dict, test_day, test_student) == output_dict
 
 
-def test_update_attendance_reg():
-    """Testing a dict of regular inputs to make sure the function update_attendance runs properly."""
+def test_already_update_attendance():
+    """Testing on a list that already accounts for the given student on that day."""
     input_dict: dict[str, list[str]] = {"monday": ["Sarah", "Johnny"], "tuesday": ["Johnny"], "wednesday": ["Jenny", "Sarah"]}
     test_day: str = "wednesday"
     test_student: str = "Jenny"
-    output_dict: dict[str, list[str]] = {}
-    assert update_attendance(input_dict, test_day, test_student) == output_dict
+    assert update_attendance(input_dict, test_day, test_student) == input_dict
 
 
 def test_empty_attendance():
     """Testing an empty attendance dict when adding a new day and student to it."""
     input_dict: dict[str, list[str]] = {}
-    test_day: str = "thrusday"
+    test_day: str = "thursday"
     test_student: str = "Monica"
     output_dict: dict[str, list[str]] = {"thursday": ["Monica"]}
     assert update_attendance(input_dict, test_day, test_student) == output_dict
