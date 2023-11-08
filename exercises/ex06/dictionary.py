@@ -32,7 +32,6 @@ def favorite_color(colors: dict[str, str]) -> str:
             fav = key
     return fav
 
-print(favorite_color({}))
 
 def count(freq_list: list[str]) -> dict[str, int]:
     """Given a list of strings, function produces a dictionary according to frequency of each value in input list."""
