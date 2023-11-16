@@ -89,6 +89,7 @@ class River:
         print(f"~~~ Day{self.day}: ~~~")
         print(f"Fish population: {len(self.fish)}")
         print(f"Bear population: {len(self.bears)}")
+        return None
             
     def one_river_day(self):
         """Simulate one day of life in the river."""
@@ -114,9 +115,9 @@ class River:
         self.view_river()
 
     def one_river_week(self):
-        """Simulates a day of life in the river."""
+        """Runs seven days on the river to simulate a week."""
         i: int = 0
-        while i <= 7:
+        while i < 7:
             self.one_river_day()
             i += 1
         return None
