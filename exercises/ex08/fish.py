@@ -5,7 +5,7 @@ class Fish:
     
     age: int
 
-    def __init__(self, age: int):
+    def __init__(self):
         """Fish's Constructor."""
         self.age = 0
         return None
