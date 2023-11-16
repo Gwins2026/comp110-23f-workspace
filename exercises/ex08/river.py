@@ -27,13 +27,13 @@ class River:
     def check_ages(self):
         """Checks ages of bears and fish and gets rid of those that are too old."""
         # Removes fish that are older than 3
-        fish_alive: list[Fish] = []
+        fish_alive: list[str] = []
         for x in range(0, len(self.fish)):
             if self.fish[x].age <= 3:
                 fish_alive.append(self.fish[x])
         self.fish = fish_alive
         # Removes bears that are older than 5
-        bears_alive: list[Bear] = []
+        bears_alive: list[str] = []
         for x in range(0, len(self.bears)):
             if self.bears[x].age <= 5:
                 bears_alive.append(self.bears[x])
@@ -42,7 +42,7 @@ class River:
 
     def remove_fish(self, amount: int):
         """Removes a specific number of fish from the river."""
-        fish_alive: list[Fish] = []
+        fish_alive: list[str] = []
         i: int = 0
         while i < len(self.fish):
             fish_alive.append(self.fish[i]) 
@@ -86,7 +86,7 @@ class River:
     
     def view_river(self):
         """Updates user on the river's fish and bear count, as well as the day."""
-        print(f"~~~ Day{self.day}: ~~~")
+        print(f"~~~ Day {self.day}: ~~~")
         print(f"Fish population: {len(self.fish)}")
         print(f"Bear population: {len(self.bears)}")
         return None
