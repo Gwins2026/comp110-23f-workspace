@@ -46,6 +46,7 @@ class River:
         i: int = 0
         while i < len(self.fish):
             fish_alive.append(self.fish[i]) 
+            i += 1
         self.fish = fish_alive
         return None
 
@@ -60,10 +61,11 @@ class River:
     def check_hunger(self):
         """Removes bears from the river when they are starved."""
         bears_alive: list[Bear] = []
-        i: int= 0
+        i: int = 0
         while i < len(self.bears):
             if self.bears[i].hunger_score >= 0:
-                bears_alive.append(self.bears[x])
+                bears_alive.append(self.bears[i])
+            i += 1
         self.bears = bears_alive
         return None
         
