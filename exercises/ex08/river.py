@@ -16,8 +16,8 @@ class River:
     def __init__(self, num_fish: int, num_bears: int):
         """New River with num_fish Fish and num_bears bears."""
         self.day: int = 0
-        self.fish: list[Fish] = []
-        self.bears: list[Bear] = []
+        self.fish: list[str] = []
+        self.bears: list[str] = []
         # populate the river with fish and bears
         for x in range(0, num_fish):
             self.fish.append(Fish())
