@@ -1,5 +1,6 @@
 """File to define Bear class"""
 
+
 class Bear:
     """A bear with a specific age, and a hunger score."""
 

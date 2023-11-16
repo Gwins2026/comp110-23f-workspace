@@ -5,15 +5,17 @@ __author__ = "730561330"
 from exercises.ex08.fish import Fish
 from exercises.ex08.bear import Bear
 
+
 class River:
     """A river in the wild that contains fish and bears."""
+
 
     day: int
     bears: list[Bear]
     fish: list[Fish]
     
     def __init__(self, num_fish: int, num_bears: int):
-        """New River with num_fish Fish and num_bears Bears."""
+        """New River with num_fish Fish and num_bears bears."""
         self.day: int = 0
         self.fish: list[Fish] = []
         self.bears: list[Bear] = []
@@ -86,8 +88,8 @@ class River:
     def view_river(self):
         """Updates user on the river's fish and bear count, as well as the day."""
         print(f"~~~ Day{self.day} ~~~")
-        print(f"Fish Population: {len(self.fish)}")
-        print(f"Bear Population: {len(self.bears)}")
+        print(f"Fish population: {len(self.fish)}")
+        print(f"Bear population: {len(self.bears)}")
             
     def one_river_day(self):
         """Simulate one day of life in the river."""
@@ -115,7 +117,7 @@ class River:
     def one_river_week(self):
         """Simulates a day of life in the river."""
         i: int = 0
-        while i < 7:
+        while i <= 7:
             self.one_river_day()
             i += 1
         return None
