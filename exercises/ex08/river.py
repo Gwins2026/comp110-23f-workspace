@@ -16,8 +16,8 @@ class River:
     def __init__(self, num_fish: int, num_bears: int):
         """New River with num_fish Fish and num_bears bears."""
         self.day: int = 0
-        self.fish: list[str] = []
-        self.bears: list[str] = []
+        self.fish: list[Fish] = []
+        self.bears: list[Bear] = []
         # populate the river with fish and bears
         for x in range(0, num_fish):
             self.fish.append(Fish())
@@ -27,13 +27,13 @@ class River:
     def check_ages(self):
         """Checks ages of bears and fish and gets rid of those that are too old."""
         # Removes fish that are older than 3
-        fish_alive: list[str] = []
+        fish_alive: list[Fish] = []
         for x in range(0, len(self.fish)):
             if self.fish[x].age <= 3:
                 fish_alive.append(self.fish[x])
         self.fish = fish_alive
         # Removes bears that are older than 5
-        bears_alive: list[str] = []
+        bears_alive: list[Bear] = []
         for x in range(0, len(self.bears)):
             if self.bears[x].age <= 5:
                 bears_alive.append(self.bears[x])
@@ -42,7 +42,7 @@ class River:
 
     def remove_fish(self, amount: int):
         """Removes a specific number of fish from the river."""
-        fish_alive: list[str] = []
+        fish_alive: list[Fish] = []
         i: int = 0
         while i < len(self.fish):
             fish_alive.append(self.fish[i]) 
@@ -59,9 +59,10 @@ class River:
     
     def check_hunger(self):
         """Removes bears from the river when they are starved."""
-        bears_alive: list[str] = []
-        for x in self.bears:
-            if self.bears[x].hunger_score >= 0:
+        bears_alive: list[Bear] = []
+        i: int= 0
+        while i < len(self.bears):
+            if self.bears[i].hunger_score >= 0:
                 bears_alive.append(self.bears[x])
         self.bears = bears_alive
         return None
@@ -117,7 +118,7 @@ class River:
     def one_river_week(self):
         """Runs seven days on the river to simulate a week."""
         i: int = 0
-        while i < 7:
+        while 1 <= 7:
             self.one_river_day()
             i += 1
         return None
