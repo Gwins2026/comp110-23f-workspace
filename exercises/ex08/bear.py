@@ -1,4 +1,4 @@
-"""File to define Bear class"""
+"""File to define Bear class."""
 
 
 class Bear:
@@ -14,7 +14,7 @@ class Bear:
         return None
     
     def one_day(self):
-        """With every day the bear gets older and hungrier"""
+        """With every day the bear gets older and hungrier."""
         self.age += 1 
         self.hunger_score -= 1
         return None

@@ -9,7 +9,6 @@ from exercises.ex08.bear import Bear
 class River:
     """A river in the wild that contains fish and bears."""
 
-
     day: int
     bears: list[Bear]
     fish: list[Fish]
@@ -87,7 +86,7 @@ class River:
     
     def view_river(self):
         """Updates user on the river's fish and bear count, as well as the day."""
-        print(f"~~~ Day{self.day} ~~~")
+        print(f"~~~ Day{self.day}: ~~~")
         print(f"Fish population: {len(self.fish)}")
         print(f"Bear population: {len(self.bears)}")
             
