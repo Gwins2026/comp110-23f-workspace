@@ -28,19 +28,19 @@ class Pizza:
     def price(self) -> float:
         """Method to Calculate price of pizza"""
         if self.size == "large":
-        price: flaot = 6.25
+            price: float = 6.25
         else:
             price: float = 5.00
-        price += .75 * input_pizza.toppings
+        price += .75 * Pizza.toppings  #don't think this is correct
         if self.gluten_free:
-            price: += 1.00
+            price += 1.00
         return price
 
     def add_toppings(self, num_toppings: int):
         """Add toppings to existing pizza"""
         self.toppings += num_toppings
 
-    def make_new_pizza_add_toppings(self, num_toppins: int) -> Pizza:
+    def make_new_pizza_add_toppings(self, num_toppings: int) -> Pizza:
         """Make a new pizza with existing pizza's properties and add toppings"""
         new_pizza: Pizza = Pizza(self.size, self.toppings + num_toppings, self.gluten_free)
         return new_pizza

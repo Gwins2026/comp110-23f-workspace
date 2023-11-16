@@ -33,12 +33,12 @@ print(sals_pizza.size)
 def price(input_pizza: Pizza) -> float:
     """Function to Calculate Price of Pizza"""
     if input_pizza.size == "large":
-        price: flaot = 6.25
+        price: float = 6.25
     else:
         price: float = 5.00
     price += .75 * input_pizza.toppings
     if input_pizza.gluten_free:
-        price: += 1.00
+        price += 1.00
     return price
 
 print(price(sals_pizza))
@@ -51,7 +51,7 @@ print(my_pizza.price())
 
 my_pizza.toppings(2)
 print(my_pizza.toppings)
-preint(my_pizza.price())
+print(my_pizza.price())
 
 
 my_other_pizza: Pizza = my_pizza.make_new_pizza_add_toppings(2)
