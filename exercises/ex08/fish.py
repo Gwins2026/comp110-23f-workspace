@@ -1,4 +1,4 @@
-"""File to define Fish class"""
+"""File to define Fish class."""
 
 class Fish:
     """A fish with a specific age."""
